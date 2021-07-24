@@ -1,0 +1,49 @@
+---
+title: "Caveats"
+subtitle: ""
+author: "Conan Liu"
+date: "2021"
+output:
+  ioslides_presentation:
+    css: slides.css
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Caveats of R
+
+* Permissive language means writing quick code is easy.
+* However, while robust sometimes not readable.
+
+## Littering
+
+```{r}
+for (i in 1:10) {
+    print(i)
+}
+```
+
+## Lack of illogical error messages
+
+```{r}
+x <- list(firstName = "John", lastName = "Smith")
+x$firstname
+```
+
+## Lack of illogical error messages 
+
+```{r}
+x <- data.frame("names" = c(1,2), "bodies" = c(1,2))
+x$bodys
+```
+
+## Lack of illogical error messages
+
+```{r}
+x <- c(1, 2)
+y <- c(3, 4, 5, 6)
+cbind(x, y)
+```
+

@@ -12,37 +12,60 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## Topics for today
+## What is programming?
 
-### Characteristics of time series (ts)
+* Using computers across a range of varied disciplines to solve problems
 
-* What is a ts?
+* "Code" is just the vocabulary of any programming language 
 
-* Classifying ts
+* "Language" being what computers understand
 
-* Trends
+## Types of languages 
 
-* Seasonality (periodicity)
-    
-### Classical decomposition
+### Compiled
 
+* machine directly translates the program
 
-## What is a time series?
+### Interpreted
 
-### A set of observations taken sequentially in time
+* code is not directly translated by machine. Instead, a different program (the interpreter), reads and executes the code.
 
+## Compiled
 
-## What is a time series?  
+* if you had a recipe for killer dumplings written in Mandarin, you as a non-Mandarin speaking human could either:
 
-### A ts can be represented as a set
+* Get the whole recipe in a pre-translated document. 
 
-$$
-\{ x_1,x_2,x_3,\dots,x_n \} 
-$$
+* This is like a compiled language. Compiled languages are converted directly into machine code that the processor can execute.
 
-### For example,
-$$
-\{ 10,31,27,42,53,15 \}
-$$
+* Faster than interpreted languages.
 
+## Interpreted
 
+* Or you get your Chinese friend to sit next to you and read out the recipe.
+
+* Interpreted languages need another program to run your code line by line to execute each command.
+
+* Slower, but the difference is lessening
+
+### Examples
+
+* Examples of pure compiled languages are C, C++, and Go.
+
+* Examples of interpreted languages are Python and Javascript. 
+
+## R language
+
+### Built for statistics and data analysis
+
+### Technically an interpreted language
+
+## Advantages or common features
+
+* Lots of "packages" i.e. additional tools for data analysis since it was built for that.
+* Can be used to generate reports with R code or showing things that were created using R code.
+* Can be integrated with Github, used to create websites and online tools easily.  
+
+## Advanced integrations
+
+* R can be integrated with other languages such as C, C++ 

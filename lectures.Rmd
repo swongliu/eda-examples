@@ -15,3 +15,6 @@ These are the lectures for the club sessions. They do not contain everything cov
 Resources:
 
 * 
+
+# Caveats of R
+* [Presentation](lecture_2.html)

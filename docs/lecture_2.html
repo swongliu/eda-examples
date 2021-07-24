@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>An introduction</title>
+  <title>Caveats</title>
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -9,7 +9,7 @@
 
 
 
-  <meta name="date" content="2021-07-28" />
+  <meta name="date" content="2021-01-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -20,7 +20,7 @@
     var SLIDE_CONFIG = {
       // Slide settings
       settings: {
-                title: 'An introduction',
+                title: 'Caveats',
                         useBuilds: true,
         usePrettify: true,
         enableSlideAreas: true,
@@ -102,75 +102,59 @@ slide:not(.current) .plotly.html-widget{
       <h1 data-config-title><!-- populated from slide_config.json --></h1>
       
       <p data-config-presenter><!-- populated from slide_config.json --></p>
-            <p style="margin-top: 6px; margin-left: -2px;">28 July 2021</p>
+            <p style="margin-top: 6px; margin-left: -2px;">2021</p>
           </hgroup>
   </slide>
 
-<slide class=""><hgroup><h2>What is programming?</h2></hgroup><article  id="what-is-programming">
+<slide class=""><hgroup><h2>Caveats of R</h2></hgroup><article  id="caveats-of-r">
 
 <ul>
-<li><p>Using computers across a range of varied disciplines to solve problems</p></li>
-<li><p>&ldquo;Code&rdquo; is just the vocabulary of any programming language</p></li>
-<li><p>&ldquo;Language&rdquo; being what computers understand</p></li>
+<li>Permissive language means writing quick code is easy.</li>
+<li>However, while robust sometimes not readable.</li>
 </ul>
 
-</article></slide><slide class=""><hgroup><h2>Types of languages</h2></hgroup><article  id="types-of-languages">
+</article></slide><slide class=""><hgroup><h2>Littering</h2></hgroup><article  id="littering">
 
-<h3>Compiled</h3>
+<pre class = 'prettyprint lang-r'>for (i in 1:10) {
+    print(i)
+}</pre>
 
-<ul>
-<li>machine directly translates the program</li>
-</ul>
+<pre >## [1] 1
+## [1] 2
+## [1] 3
+## [1] 4
+## [1] 5
+## [1] 6
+## [1] 7
+## [1] 8
+## [1] 9
+## [1] 10</pre>
 
-<h3>Interpreted</h3>
+</article></slide><slide class=""><hgroup><h2>Lack of illogical error messages</h2></hgroup><article  id="lack-of-illogical-error-messages">
 
-<ul>
-<li>code is not directly translated by machine. Instead, a different program (the interpreter), reads and executes the code.</li>
-</ul>
+<pre class = 'prettyprint lang-r'>x &lt;- list(firstName = &quot;John&quot;, lastName = &quot;Smith&quot;)
+x$firstname</pre>
 
-</article></slide><slide class=""><hgroup><h2>Compiled</h2></hgroup><article  id="compiled-1">
+<pre >## NULL</pre>
 
-<ul>
-<li><p>if you had a recipe for killer dumplings written in Mandarin, you as a non-Mandarin speaking human could either:</p></li>
-<li><p>Get the whole recipe in a pre-translated document.</p></li>
-<li><p>This is like a compiled language. Compiled languages are converted directly into machine code that the processor can execute.</p></li>
-<li><p>Faster than interpreted languages.</p></li>
-</ul>
+</article></slide><slide class=""><hgroup><h2>Lack of illogical error messages</h2></hgroup><article  id="lack-of-illogical-error-messages-1">
 
-</article></slide><slide class=""><hgroup><h2>Interpreted</h2></hgroup><article  id="interpreted-1">
+<pre class = 'prettyprint lang-r'>x &lt;- data.frame(&quot;names&quot; = c(1,2), &quot;bodies&quot; = c(1,2))
+x$bodys</pre>
 
-<ul>
-<li><p>Or you get your Chinese friend to sit next to you and read out the recipe.</p></li>
-<li><p>Interpreted languages need another program to run your code line by line to execute each command.</p></li>
-<li><p>Slower, but the difference is lessening</p></li>
-</ul>
+<pre >## NULL</pre>
 
-<h3>Examples</h3>
+</article></slide><slide class=""><hgroup><h2>Lack of illogical error messages</h2></hgroup><article  id="lack-of-illogical-error-messages-2">
 
-<ul>
-<li><p>Examples of pure compiled languages are C, C++, and Go.</p></li>
-<li><p>Examples of interpreted languages are Python and Javascript.</p></li>
-</ul>
+<pre class = 'prettyprint lang-r'>x &lt;- c(1, 2)
+y &lt;- c(3, 4, 5, 6)
+cbind(x, y)</pre>
 
-</article></slide><slide class=""><hgroup><h2>R language</h2></hgroup><article  id="r-language">
-
-<h3>Built for statistics and data analysis</h3>
-
-<h3>Technically an interpreted language</h3>
-
-</article></slide><slide class=""><hgroup><h2>Advantages or common features</h2></hgroup><article  id="advantages-or-common-features">
-
-<ul>
-<li>Lots of &ldquo;packages&rdquo; i.e. additional tools for data analysis since it was built for that.</li>
-<li>Can be used to generate reports with R code or showing things that were created using R code.</li>
-<li>Can be integrated with Github, used to create websites and online tools easily.</li>
-</ul>
-
-</article></slide><slide class=""><hgroup><h2>Advanced integrations</h2></hgroup><article  id="advanced-integrations">
-
-<ul>
-<li>R can be integrated with other languages such as C, C++</li>
-</ul></article></slide>
+<pre >##      x y
+## [1,] 1 3
+## [2,] 2 4
+## [3,] 1 5
+## [4,] 2 6</pre></article></slide>
 
 
   <slide class="backdrop"></slide>
