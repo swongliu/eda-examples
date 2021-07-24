@@ -3,7 +3,7 @@ title: "**Lecture presentations**"
 output: html_document
 ---
 
-These are the lectures for the club sessions. They do not contain everything and are more like points of discussion.
+These are the lectures for the club sessions. They do not contain everything covered during club sessions.
 
 # Lecture 1
 * [Presentation](lecture_1.html)
