@@ -1,0 +1,48 @@
+---
+title: "An introduction"
+subtitle: ""
+author: "Conan Liu"
+date: "28 July 2021"
+output:
+  ioslides_presentation:
+    css: slides.css
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Topics for today
+
+### Characteristics of time series (ts)
+
+* What is a ts?
+
+* Classifying ts
+
+* Trends
+
+* Seasonality (periodicity)
+    
+### Classical decomposition
+
+
+## What is a time series?
+
+### A set of observations taken sequentially in time
+
+
+## What is a time series?  
+
+### A ts can be represented as a set
+
+$$
+\{ x_1,x_2,x_3,\dots,x_n \} 
+$$
+
+### For example,
+$$
+\{ 10,31,27,42,53,15 \}
+$$
+
+

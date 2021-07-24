@@ -1,0 +1,40 @@
+---
+title: "Year 10 Data Science Club"
+subtitle: ""
+output:
+  html_document:
+    toc: false
+    toc_float: false
+    toc_depth: 2
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<br>
+
+# Info
+
+This is the landing page of the club. On this website, you will be able to access distributed resources and slideshows used during sessions.
+
+If not done already, fill in [this](https://forms.gle/3xtChykNG3L4h34w8) form please.
+
+<br>
+
+# Languages used
+#
+* R language
+* Download RStudio, the interface to use the language R, [here](https://www.rstudio.com/products/rstudio/download/#download).
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<center>*This site was last updated at `r format(Sys.time(), "%H:%M")` on `r format(Sys.Date(), "%d %b %Y")`*</center>

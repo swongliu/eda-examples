@@ -1,0 +1,10 @@
+---
+title: "**Lecture presentations**"
+output: html_document
+---
+# Lecture 1
+* [Presentation](lecture_1.html)
+
+Resources:
+
+* 
