@@ -64,7 +64,8 @@ knitr::opts_chunk$set(echo = FALSE)
 
 * Lots of "packages" i.e. additional tools for data analysis since it was built for that.
 * Can be used to generate reports with R code or showing things that were created using R code.
-* Can be integrated with Github, used to create websites and online tools easily.  
+* Can be integrated with Github, used to create websites and online tools easily. 
+* This whole website and its slide shows were all created in R (i.e. R can be convenient if you are using the language quite a lot for some project in creating a light website and accessories).
 
 ## Advanced integrations
 
