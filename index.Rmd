@@ -22,11 +22,6 @@ If not done already, fill in [this](https://forms.gle/3xtChykNG3L4h34w8) form pl
 
 <br>
 
-# Languages used
-* R language
-
-<br>
-
 # Download RStudio
 
 * Download RStudio, the interface to use the language R, [here](https://www.rstudio.com/products/rstudio/download/#download).
