@@ -24,7 +24,7 @@ If not done already, fill in [this](https://forms.gle/3xtChykNG3L4h34w8) form pl
 
 # Download the base language R
 
-* Download the base language of R, which your computer needs before installing other things, [here](https://cran.csiro.au/)
+* Download the base language of R, which your computer needs before installing other things, [here](https://cran.csiro.au/).
 
 <br>
 
