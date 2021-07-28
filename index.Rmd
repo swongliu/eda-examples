@@ -6,6 +6,7 @@ output:
     toc: true
     toc_float: true
     toc_depth: 2
+    theme: yeti
 ---
 
 ```{r setup, include=FALSE}

@@ -1,6 +1,12 @@
 ---
-title: "**Lecture presentations**"
-output: html_document
+title: "**Lectures**"
+subtitle: ""
+output:
+  html_document:
+    toc: false
+    toc_float: false
+    toc_depth: 2
+    theme: yeti
 ---
 
 <br>
