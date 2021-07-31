@@ -4,7 +4,7 @@ navbar:
   left:
     - text: ""
       icon: fa-home fa-lg
-      href: home.html
+      href: index.html
     - text: "Lectures"
       href: lectures.html
     - text: "Code"
