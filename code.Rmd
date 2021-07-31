@@ -1,0 +1,82 @@
+---
+title: "**Code**"
+subtitle: "Specifically code we have looked at during club sessions"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    toc_depth: 2
+    theme: yeti
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, eval = FALSE)
+```
+<br>
+
+# Session 3 (30 July)
+
+Covered:
+
+* basic R code and syntax, incl. vectors and different classes of data
+* intro to logical subsetting
+* functions and use in statistics
+* ugly plots 
+
+```{r}
+1+1
+
+2+2
+
+variable <- 2
+
+class(name)
+
+c <- "word"
+
+class(c)
+
+vector <- c(1, 2, 3, 4)
+
+vector2 <- c("one", "two", "three", "four")
+
+vector[2]
+
+vector[3]
+
+vector[4]
+
+vector1 <- c(1, 2, 3, 4)
+
+vector <- c("one", "one", "one")
+
+vector <- c('one', 'one')
+
+length(vector1)
+
+vector2 <- c(1, 2)
+
+length(vector2)
+
+#a caveat of R 
+cbind(vector1, vector2)
+
+mean(vector1)
+
+median(vector1)
+```
+
+Ugly plots (for future comparison):
+
+```{r, echo = TRUE, eval = TRUE}
+x <- c(1, 2, 3, 4)
+y <- c(2, 3, 4, 5)
+
+plot(x, y)
+
+hist(x)
+
+barplot(x)
+```
+
+

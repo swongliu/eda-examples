@@ -11,16 +11,12 @@ output:
 
 <br>
 
-These are the lectures for the club sessions. They do not contain everything covered during club sessions.
+These are the lectures for the club sessions. They do not contain everything covered during club sessions and are not always used. See the *Code* tab for more.
 
 <br>
 
-# Lecture 1
+# An introduction to programming
 * [Presentation](lecture_1.html)
-
-Resources:
-
-* 
 
 # Caveats of R
 * [Presentation](lecture_2.html)

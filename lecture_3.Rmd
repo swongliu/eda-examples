@@ -1,0 +1,21 @@
+---
+title: "Introduction to R"
+subtitle: ""
+author: "Conan Liu"
+date: "30 July 2021"
+output:
+  ioslides_presentation:
+    css: slides.css
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Creating objects
+
+To create an object you need:
+
+* a name (e.g. ‘a’)
+* a value (e.g. ‘1’)
+* the assignment operator (‘<-‘)
