@@ -1,7 +1,6 @@
 ---
 title: "**Code**"
 subtitle: "Specifically code we have looked at during club sessions"
-permalink: /code/
 output:
   html_document:
     toc: true
