@@ -22,9 +22,13 @@ knitr::opts_chunk$set(echo = TRUE)
 
 This is the landing page of the club. On this website, you will be able to access distributed resources and slideshows used during club sessions.
 
-If not done already, fill in [this](https://forms.gle/3xtChykNG3L4h34w8) form please.
+# Data
+
+* Download the Melbourne Housing dataset [here](https://www.kaggle.com/anthonypino/melbourne-housing-market).
 
 <br>
+
+If not done already, fill in [this](https://forms.gle/3xtChykNG3L4h34w8) form please.
 
 # Download the base language R
 
