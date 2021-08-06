@@ -3,8 +3,8 @@ title: "**Lectures**"
 subtitle: ""
 output:
   html_document:
-    toc: false
-    toc_float: false
+    toc: true
+    toc_float: true
     toc_depth: 2
     theme: yeti
 ---
@@ -18,8 +18,12 @@ These are the lectures for the club sessions. They do not contain everything cov
 # An introduction to programming
 * [Presentation](lecture_1.html)
 
+<br>
+
 # Caveats of R
 * [Presentation](lecture_2.html)
+
+<br>
 
 # Intro to data science and EDA
 * [Presentation](lecture_4.html)
