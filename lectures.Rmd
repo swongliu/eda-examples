@@ -46,7 +46,7 @@ These are the lectures for the club sessions. They do not contain everything cov
 
 <br>
 
-# Role of data
+# Roles of data
 * [Presentation](lecture_7.html)
 
 
