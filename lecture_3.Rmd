@@ -2,7 +2,7 @@
 title: "More on data science, data and our purposes"
 subtitle: ""
 author: "Conan Liu"
-date: "30 July 2021"
+date: "September 2021"
 output:
   ioslides_presentation:
     css: slides.css

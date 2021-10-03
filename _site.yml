@@ -9,7 +9,9 @@ navbar:
       href: lectures.html
     - text: "Code"
       href: code.html
-
+    - text: "Resources"
+      href: resources.html
+      
 output_dir: "docs"
 output:
   html_document:

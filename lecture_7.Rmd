@@ -1,0 +1,25 @@
+---
+title: "Roles of data"
+subtitle: ""
+author: "Conan Liu"
+date: "October 2021"
+output:
+  ioslides_presentation:
+    css: slides.css
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Role of data
+
+Data is going to play huge roles in helping society progress
+
+Will help solve many of the largest issues within society
+
+* Environmental sustainability
+
+* 
+
+
