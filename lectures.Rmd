@@ -44,5 +44,9 @@ These are the lectures for the club sessions. They do not contain everything cov
 # On data visualisation
 * [Presentation](lecture_6.html)
 
+<br>
+
+# Role of data
+* [Presentation](lecture_7.html)
 
 
