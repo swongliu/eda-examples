@@ -27,3 +27,22 @@ These are the lectures for the club sessions. They do not contain everything cov
 
 # Intro to data science and EDA
 * [Presentation](lecture_4.html)
+
+<br>
+
+# Holidays
+
+* Watch the introduction to working with data video [here](https://www.youtube.com/watch?v=RtV0Ne__r2k&t=131s&ab_channel=Ciu).
+
+<br>
+
+# More on data science, data and our purposes
+* [Presentation](lecture_3.html)
+
+<br>
+
+# On data visualisation
+* [Presentation](lecture_6.html)
+
+
+

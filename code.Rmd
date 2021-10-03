@@ -14,7 +14,7 @@ knitr::opts_chunk$set(echo = TRUE, eval = FALSE)
 ```
 <br>
 
-# Session 3 (30 July)
+# Session 3
 
 Covered:
 
@@ -76,5 +76,9 @@ hist(x)
 
 barplot(x)
 ```
+
+# Holidays
+
+* Watch the introduction to working with data video [here](https://www.youtube.com/watch?v=RtV0Ne__r2k&t=131s&ab_channel=Ciu).
 
 

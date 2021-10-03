@@ -1,0 +1,28 @@
+---
+title: "Data visualisation"
+subtitle: ""
+author: "Conan Liu"
+date: "2021"
+output:
+  ioslides_presentation:
+    css: slides.css
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Data visualisation and libraries
+
+ggplot2 is a necessary package for data visualisation (data viz or vis) in R
+
+Recall packages are external tools
+
+##
+
+```{r, echo = TRUE, eval = FALSE}
+install.packages("ggplot2")
+
+library(ggplot2)
+```
+
