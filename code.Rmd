@@ -88,7 +88,7 @@ Covered:
 * the dplyr package and its 'verbs'
 
 ```{r}
-
+#verbs
 ```
 
 # Using ggplot2
