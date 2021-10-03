@@ -81,4 +81,23 @@ barplot(x)
 
 * Watch the introduction to working with data video [here](https://www.youtube.com/watch?v=RtV0Ne__r2k&t=131s&ab_channel=Ciu).
 
+# Cleaning data (preprocessing)
 
+Covered:
+
+* the dplyr package and its 'verbs'
+
+```{r}
+
+```
+
+# Using ggplot2
+
+Covered:
+
+* syntax and structure of using ggplot2 to create better visualisations of data
+
+```{r}
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy))
+```
