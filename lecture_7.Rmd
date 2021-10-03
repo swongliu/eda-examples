@@ -20,6 +20,23 @@ Will help solve many of the largest issues within society
 
 * Environmental sustainability
 
-* 
+* Ecological damage
+
+## Overfitting in models
+
+Say in a housing dataset there were two mansions that had doors with a green paint cover. 
+
+A risk models have is overfitting
+* So the model jumps to the conclusion that all houses with green doors are good houses
+
+Not necessarily the case.
+
+## Risks of data
+
+With increase in data comes risks of overfitting, or disparate impact from predictions
+
+* Especially applicable to health insurance, or ANY insurance!
+
+
 
 
