@@ -20,7 +20,17 @@ knitr::opts_chunk$set(echo = TRUE, eval = FALSE)
 <br>
 
 # Role of data (1)
-* Check out this article on the Pfizer data science team [here](https://spectrum.ieee.org/pfizer-covid-vaccines-data-science)!
+* Check out this article on how Pfizer's informatics and digital technology team processed all of the clinical trial data on COVID-19 to bring their vaccine to the market in record time [here](https://spectrum.ieee.org/pfizer-covid-vaccines-data-science)!
+
+<br>
+
+# Ethics in data science (1)
+* The U.N.’s human rights chief is calling for a moratorium on AI systems until an assessment can determine the risks to human rights. Read about it [here](https://www.npr.org/2021/09/16/1037902314/the-u-n-warns-that-ai-can-pose-a-threat-to-human-rights?utm_source=Iterable&utm_medium=email&utm_campaign=newsletter_154)!
+
+<br>
+
+# Ethics in data science (2)
+* [This](https://theconversation.com/data-science-education-lacks-a-much-needed-focus-on-ethics-164372?utm_source=Iterable&utm_medium=email&utm_campaign=newsletter_154) study found that undergraduate data science education is misses the target when considering teachings on ethics.
 
 <br>
 
