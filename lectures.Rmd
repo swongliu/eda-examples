@@ -9,9 +9,9 @@ output:
     theme: yeti
 ---
 
-<br>
+<br>    
 
-These are lecture slides. 
+This is a template 
 
 <br>
 

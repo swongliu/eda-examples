@@ -16,28 +16,3 @@ knitr::opts_chunk$set(echo = TRUE, eval = FALSE)
 
 # Data science and problem solving
 * Check [this](https://online.jcu.edu.au/blog/data-science-solves-business-problems) out!
-
-<br>
-
-# Role of data (1)
-* Check out this article on how Pfizer's informatics and digital technology team processed all of the clinical trial data on COVID-19 to bring their vaccine to the market in record time [here](https://spectrum.ieee.org/pfizer-covid-vaccines-data-science)!
-
-<br>
-
-# Ethics in data science (1)
-* The U.N.’s human rights chief is calling for a moratorium on AI systems until an assessment can determine the risks to human rights. Read about it [here](https://www.npr.org/2021/09/16/1037902314/the-u-n-warns-that-ai-can-pose-a-threat-to-human-rights?utm_source=Iterable&utm_medium=email&utm_campaign=newsletter_154)!
-
-<br>
-
-# Ethics in data science (2)
-* [This](https://theconversation.com/data-science-education-lacks-a-much-needed-focus-on-ethics-164372?utm_source=Iterable&utm_medium=email&utm_campaign=newsletter_154) study found that undergraduate data science education is misses the target when considering teachings on ethics.
-
-<br>
-
-# Role of data (2)
-* Read this Forbes article on how data science can solve some of the world's most pressing issues [here](https://www.forbes.com/sites/imperialinsights/2019/09/23/data-science-for-social-good/?sh=f29d4a1464b1)!
-
-# Ethics in data science (3)
-* As more data becomes available, risks arise over data security but also disparate impact as a result of data. There is also the issue of transparency with the collection of data itself. Hundreds of footballers (soccer, not the AFL or NFL) have threatened legal action against the data collection industry, which could change how information is handled. Read more about it [here](https://www.bbc.com/news/uk-wales-58873132?utm_source=Iterable&utm_medium=email&utm_campaign=newsletter_157)!
-
-
