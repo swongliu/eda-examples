@@ -13,7 +13,8 @@
 
 <title>Lectures</title>
 
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.22/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -31,8 +32,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.0/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.0/css/v4-shims.min.css" rel="stylesheet" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -61,6 +62,7 @@ if (window.hljs) {
 
 
 
+
 <style type = "text/css">
 .main-container {
   max-width: 940px;
@@ -81,6 +83,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -138,11 +143,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -171,8 +180,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -180,16 +189,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -233,7 +235,7 @@ $(document).ready(function () {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -276,54 +278,12 @@ $(document).ready(function () {
 
 
 <p><br></p>
-<p>These are the lectures for the club sessions. They do not contain everything covered during club sessions and are not always used. See the <em>Code</em> tab for more.</p>
+<p>These are lecture slides.</p>
 <p><br></p>
 <div id="an-introduction-to-programming" class="section level1">
 <h1>An introduction to programming</h1>
 <ul>
 <li><a href="lecture_1.html">Presentation</a></li>
-</ul>
-<p><br></p>
-</div>
-<div id="caveats-of-r" class="section level1">
-<h1>Caveats of R</h1>
-<ul>
-<li><a href="lecture_2.html">Presentation</a></li>
-</ul>
-<p><br></p>
-</div>
-<div id="intro-to-data-science-and-eda" class="section level1">
-<h1>Intro to data science and EDA</h1>
-<ul>
-<li><a href="lecture_4.html">Presentation</a></li>
-</ul>
-<p><br></p>
-</div>
-<div id="holidays" class="section level1">
-<h1>Holidays</h1>
-<ul>
-<li>Watch the introduction to working with data video <a href="https://www.youtube.com/watch?v=RtV0Ne__r2k&amp;t=131s&amp;ab_channel=Ciu">here</a>.</li>
-</ul>
-<p><br></p>
-</div>
-<div id="more-on-data-science-data-and-our-purposes" class="section level1">
-<h1>More on data science, data and our purposes</h1>
-<ul>
-<li><a href="lecture_3.html">Presentation</a></li>
-</ul>
-<p><br></p>
-</div>
-<div id="on-data-visualisation" class="section level1">
-<h1>On data visualisation</h1>
-<ul>
-<li><a href="lecture_6.html">Presentation</a></li>
-</ul>
-<p><br></p>
-</div>
-<div id="roles-of-data" class="section level1">
-<h1>Roles of data</h1>
-<ul>
-<li><a href="lecture_7.html">Presentation</a></li>
 </ul>
 </div>
 
