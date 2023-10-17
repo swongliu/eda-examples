@@ -1,8 +1,8 @@
 ---
-title: "An introduction"
+title: "Template lecture"
 subtitle: ""
-author: "Conan Liu"
-date: "28 July 2021"
+author: "Author name"
+date: "2024"
 output:
   ioslides_presentation:
     css: slides.css
@@ -12,61 +12,12 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## What is programming?
+## Test
 
-* Using computers across a range of varied disciplines to solve problems
+* Test
 
-* "Code" is just the vocabulary of any programming language 
+## Test 2
 
-* "Language" being what computers understand
+### Test title 
 
-## Types of languages 
-
-### Compiled
-
-* machine directly translates the program
-
-### Interpreted
-
-* code is not directly translated by machine. Instead, a different program (the interpreter), reads and executes the code.
-
-## Compiled
-
-* if you had a recipe for killer dumplings written in Mandarin, you as a non-Mandarin speaking human could either:
-
-* Get the whole recipe in a pre-translated document. 
-
-* This is like a compiled language. Compiled languages are converted directly into machine code that the processor can execute.
-
-* Faster than interpreted languages.
-
-## Interpreted
-
-* Or you get your Chinese friend to sit next to you and read out the recipe.
-
-* Interpreted languages need another program to run your code line by line to execute each command.
-
-* Slower, but the difference is lessening
-
-### Examples
-
-* Examples of pure compiled languages are C, C++, and Go.
-
-* Examples of interpreted languages are Python and Javascript. 
-
-## R language
-
-### Built for statistics and data analysis
-
-### Technically an interpreted language
-
-## Advantages or common features
-
-* Lots of "packages" i.e. additional tools for data analysis since it was built for that.
-* Can be used to generate reports with R code or showing things that were created using R code.
-* Can be integrated with Github, used to create websites and online tools easily. 
-* This whole website and its slide shows were all created in R (i.e. R can be convenient if you are using the language quite a lot for some project in creating a light website and accessories).
-
-## Advanced integrations
-
-* R can be integrated with other languages such as C, C++ 
+* Dot point
