@@ -868,6 +868,52 @@ road_g
 <br>
 Analysis
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+```{r}
+library(leaflet)
+library(htmlwidgets)
+
+melb <- read.csv("Melbourne_housing_data_cleaned.csv")
+
+m <- leaflet(melb) %>%
+  addTiles() %>%
+  addCircleMarkers(
+    lng = ~Longitude,
+    lat = ~Latitude,
+    popup = ~Price,
+    radius = 3  # Adjust the radius value as needed for the desired marker size
+  )
+
+
+# Save the Leaflet map as an HTML widget
+saveWidget(m, file = "leaflet_map.html")
+
+```
+
+<div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+ <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="leaflet_map.html" allow="fullscreen">
+  </iframe>
+</div>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
 # Melbourne Housing Market Analysis Example
 
 <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
@@ -886,4 +932,8 @@ Analysis
 # Template title
 
 * Template video [here](https://www.youtube.com/watch?v=RtV0Ne__r2k&t=131s&ab_channel=Ciu).
+
+
+
+
 
