@@ -328,13 +328,7 @@ div.tocify {
   </a>
 </li>
 <li>
-  <a href="lectures.html">Lectures</a>
-</li>
-<li>
   <a href="code.html">Code</a>
-</li>
-<li>
-  <a href="resources.html">Resources</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -350,7 +344,7 @@ div.tocify {
 
 <h1 class="title toc-ignore"><strong>Some advanced EDA
 examples</strong></h1>
-<h3 class="subtitle">Advanced…</h3>
+<h3 class="subtitle">Extending what we have covered in class</h3>
 
 </div>
 
@@ -366,13 +360,18 @@ pre[class] {
 }
 </style>
 <p><br></p>
-<div id="actuarial-example-code" class="section level1">
-<h1>Actuarial example (code)</h1>
+<div id="example-1" class="section level1">
+<h1>Example 1</h1>
 <p><br></p>
-<p>To-do:</p>
 <ul>
-<li>Document code better</li>
-<li>Dot point 2</li>
+<li><p>This first example utilises a dataset consisting of real road
+crashes in Victoria obtained from the <a
+href="https://discover.data.vic.gov.au/dataset/crash-stats-data-extract">CrashStats
+datasets provided by VicRoads</a>. The CrashStats data allows us to
+analyse serious vehicle crashes based on time, location, conditions,
+crash type, road user type, object hit etc.</p></li>
+<li><p>The code below has some wrangling, and then the plots are stored
+as objects.</p></li>
 </ul>
 <p><br></p>
 <pre class="r"><code>library(tidyverse)
@@ -758,8 +757,8 @@ road_g &lt;- ggplot(road_geom, aes(x = speed_g, y = as.numeric(Count), fill = as
   geom_text(data = labels_df, aes(label = y_labels), color = &#39;white&#39;, fontface = &#39;bold&#39;, size = 4)</code></pre>
 <p><br></p>
 </div>
-<div id="actuarial-example-plots" class="section level1">
-<h1>Actuarial example (plots)</h1>
+<div id="example-1-plots" class="section level1">
+<h1>Example 1 (plots)</h1>
 <p><br>
 <img src="code_files/figure-html/unnamed-chunk-4-1.png" width="672" />
 <br> Analysis</p>
@@ -785,20 +784,65 @@ road_g &lt;- ggplot(road_geom, aes(x = speed_g, y = as.numeric(Count), fill = as
 <img src="code_files/figure-html/unnamed-chunk-11-1.png" width="672" />
 <br> Analysis</p>
 <p><br> <br> <br> <br> <br> <br></p>
+</div>
+<div id="example-2" class="section level1">
+<h1>Example 2</h1>
+<p><br></p>
+<ul>
+<li>This second example utilises the Melbourne housing market dataset.
+Note the code below does not include the pre-processing stage, which is
+necessary as the raw data from Kaggle has missing values.</li>
+</ul>
 <pre class="r"><code>library(leaflet)
 library(htmlwidgets)
 
 melb &lt;- read.csv(&quot;Melbourne_housing_data_cleaned.csv&quot;)
 
+melb$Price &lt;- as.character(melb$Price)
+
+# Define a color palette
+colors &lt;- colorRampPalette(c(&quot;lightblue&quot;, &quot;navy&quot;))  # Adjust the color range as needed
+
+library(leaflet)
+library(RColorBrewer)  # You&#39;ll need this package for color scales
+
+# Assuming you have a dataset &#39;melb&#39; with columns &#39;Longitude&#39; and &#39;Latitude&#39;
+# Convert the &#39;Price&#39; column to character
+melb$Price &lt;- as.numeric(melb$Price)
+
+# Define a color palette
+library(leaflet)
+
+# Define a custom color palette for Price
+# Define the number of color steps and labels you want
+library(leaflet)
+
+# Define a custom color palette for Price
+custom_palette &lt;- colorNumeric(
+  palette = c(&quot;steelblue2&quot;, &quot;white&quot;),  # Your custom colors for low and high values
+  domain = melb$Price
+)
+
+# Create the map
 m &lt;- leaflet(melb) %&gt;%
-  addTiles() %&gt;%
+  addProviderTiles(&quot;Stadia.AlidadeSmooth&quot;) %&gt;%
   addCircleMarkers(
     lng = ~Longitude,
     lat = ~Latitude,
     popup = ~Price,
-    radius = 3  # Adjust the radius value as needed for the desired marker size
-  )
+    radius = 3,
+    color = ~custom_palette(Price)) %&gt;%
+    addLegend(&quot;bottomright&quot;, pal = custom_palette, values = ~Price,
+    title = &quot;Est. GDP (2010)&quot;,
+    labFormat = labelFormat(prefix = &quot;$&quot;),
+    opacity = 1)
 
+# Add a continuous color legend for Price
+m &lt;- m %&gt;% addLegend(&quot;bottomright&quot;, pal = custom_palette, values = ~Price,
+    title = &quot;Est. GDP (2010)&quot;,
+    labFormat = labelFormat(prefix = &quot;$&quot;),
+    opacity = 1
+  )
 
 # Save the Leaflet map as an HTML widget
 saveWidget(m, file = &quot;leaflet_map.html&quot;)</code></pre>
@@ -814,6 +858,19 @@ style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
 <div id="melbourne-housing-market-analysis-example"
 class="section level1">
 <h1>Melbourne Housing Market Analysis Example</h1>
+</div>
+<div id="example-3" class="section level1">
+<h1>Example 3</h1>
+<p><br></p>
+<ul>
+<li><p>This slideshow contains visualisations created using two
+datasets. The first is the Melbourne housing market dataset. The second
+is <a href="https://www.rba.gov.au/statistics/cash-rate/">cash rate data
+from the RBA</a>. The rationale for using the cash rate data was to
+overlay the time series analysis of property sales.</p></li>
+<li><p>Some of the interactive plots were creating using tableaeu,
+but</p></li>
+</ul>
 <div
 style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
  padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;

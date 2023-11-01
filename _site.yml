@@ -5,12 +5,12 @@ navbar:
     - text: ""
       icon: fa-home fa-lg
       href: index.html
-    - text: "Lectures"
-      href: lectures.html
     - text: "Code"
       href: code.html
-    - text: "Resources"
-      href: resources.html
+    # - text: "Lectures"
+    #   href: lectures.html
+    # - text: "Resources"
+    #   href: resources.html
       
 output_dir: "docs"
 output:

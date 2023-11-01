@@ -14,5 +14,5 @@ knitr::opts_chunk$set(echo = TRUE, eval = FALSE)
 ```
 <br>
 
-# Data science and problem solving
-* Check [this](https://online.jcu.edu.au/blog/data-science-solves-business-problems) out!
+# Template link
+* Check [this](https://concptl.github.io/eda-examples/) out!
