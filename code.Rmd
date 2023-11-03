@@ -878,7 +878,7 @@ Analysis
 <br>
 
 * This second example utilises the Melbourne housing market dataset. Note the code below does not include the pre-processing stage, which is necessary as the raw data from Kaggle has missing values. 
-* It utilises interactive map libraries
+* It utilises interactive map librariess
 
 <br>
 ```{r}
