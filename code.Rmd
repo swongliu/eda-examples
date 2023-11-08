@@ -874,6 +874,85 @@ Analysis
 <br>
 <br>
 
+# Example 2 - plotly examples
+
+```{r, message = FALSE}
+library(plotly)
+library(htmlwidgets)
+
+combi <- read.csv("Melbourne_housing_data_cleaned.csv")
+
+# Create a correlation matrix
+correlation_matrix <- cor(combi[, c("Price", "Rooms", "Bathroom", "Car", "Landsize")])
+
+# Create an interactive heatmap
+heatmap <- plot_ly(z = correlation_matrix, x = colnames(correlation_matrix), y = colnames(correlation_matrix), 
+                   type = "heatmap", colorscale = "RdYlBu")
+
+# Customize the layout
+layout <- list(
+  title = "Interactive Heatmap of Correlations",
+  xaxis = list(tickangle = 45),
+  yaxis = list(tickangle = 45)
+)
+
+# Create and display the interactive plot
+plot_heatmap <- heatmap %>% layout(layout)
+
+saveWidget(plot_heatmap, file = "heatmap.html")
+
+```
+
+<div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+ <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="heatmap.html" allow="fullscreen">
+  </iframe>
+</div>
+
+</br>
+
+```{r, message = FALSE, warning = FALSE}
+library(plotly)
+
+# Assuming your dataset is named 'combi'
+# Group data by CouncilArea and calculate the count of properties
+council_area_data <- combi %>% 
+  group_by(CouncilArea) %>% 
+  summarize(Count = n())
+
+# Create a sunburst plot
+sunburst_plot <- plot_ly(
+  ids = council_area_data$CouncilArea,
+  labels = council_area_data$CouncilArea,
+  parents = "",
+  values = council_area_data$Count,
+  type = 'sunburst'
+)
+
+# Customize the sunburst plot
+sunburst_plot <- sunburst_plot %>%
+  layout(
+    margin = list(l = 0, r = 0, b = 0, t = 0),
+    sunburstcolors = colorRamp(c("lightblue", "blue"))
+  )
+
+# Create and display the interactive sunburst plot
+
+saveWidget(sunburst_plot, file = "sunburst.html")
+
+```
+
+<div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+ <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="sunburst.html" allow="fullscreen">
+  </iframe>
+</div>
+
+
 # Example 2
 <br>
 
@@ -922,16 +1001,9 @@ m <- leaflet(melb) %>%
     radius = 3,
     color = ~custom_palette(Price)) %>%
     addLegend("bottomright", pal = custom_palette, values = ~Price,
-    title = "Est. GDP (2010)",
+    title = "Price (AUD)",
     labFormat = labelFormat(prefix = "$"),
     opacity = 1)
-
-# Add a continuous color legend for Price
-m <- m %>% addLegend("bottomright", pal = custom_palette, values = ~Price,
-    title = "Est. GDP (2010)",
-    labFormat = labelFormat(prefix = "$"),
-    opacity = 1
-  )
 
 # Save the Leaflet map as an HTML widget
 saveWidget(m, file = "leaflet_map.html")
@@ -955,9 +1027,6 @@ saveWidget(m, file = "leaflet_map.html")
 <br>
 <br>
 
-
-# Melbourne Housing Market Analysis Example
-
 # Example 3
 <br>
 
@@ -976,6 +1045,10 @@ saveWidget(m, file = "leaflet_map.html")
 
 
 
+</br>
+</br>
+</br>
+</br>
 
 
 # Template title

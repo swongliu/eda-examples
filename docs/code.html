@@ -785,6 +785,74 @@ road_g &lt;- ggplot(road_geom, aes(x = speed_g, y = as.numeric(Count), fill = as
 <br> Analysis</p>
 <p><br> <br> <br> <br> <br> <br></p>
 </div>
+<div id="example-2---plotly-examples" class="section level1">
+<h1>Example 2 - plotly examples</h1>
+<pre class="r"><code>library(plotly)
+library(htmlwidgets)
+
+combi &lt;- read.csv(&quot;Melbourne_housing_data_cleaned.csv&quot;)
+
+# Create a correlation matrix
+correlation_matrix &lt;- cor(combi[, c(&quot;Price&quot;, &quot;Rooms&quot;, &quot;Bathroom&quot;, &quot;Car&quot;, &quot;Landsize&quot;)])
+
+# Create an interactive heatmap
+heatmap &lt;- plot_ly(z = correlation_matrix, x = colnames(correlation_matrix), y = colnames(correlation_matrix), 
+                   type = &quot;heatmap&quot;, colorscale = &quot;RdYlBu&quot;)
+
+# Customize the layout
+layout &lt;- list(
+  title = &quot;Interactive Heatmap of Correlations&quot;,
+  xaxis = list(tickangle = 45),
+  yaxis = list(tickangle = 45)
+)
+
+# Create and display the interactive plot
+plot_heatmap &lt;- heatmap %&gt;% layout(layout)
+
+saveWidget(plot_heatmap, file = &quot;heatmap.html&quot;)</code></pre>
+<div
+style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+<p><iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="heatmap.html" allow="fullscreen"> </iframe></p>
+</div>
+<p></br></p>
+<pre class="r"><code>library(plotly)
+
+# Assuming your dataset is named &#39;combi&#39;
+# Group data by CouncilArea and calculate the count of properties
+council_area_data &lt;- combi %&gt;% 
+  group_by(CouncilArea) %&gt;% 
+  summarize(Count = n())
+
+# Create a sunburst plot
+sunburst_plot &lt;- plot_ly(
+  ids = council_area_data$CouncilArea,
+  labels = council_area_data$CouncilArea,
+  parents = &quot;&quot;,
+  values = council_area_data$Count,
+  type = &#39;sunburst&#39;
+)
+
+# Customize the sunburst plot
+sunburst_plot &lt;- sunburst_plot %&gt;%
+  layout(
+    margin = list(l = 0, r = 0, b = 0, t = 0),
+    sunburstcolors = colorRamp(c(&quot;lightblue&quot;, &quot;blue&quot;))
+  )
+
+# Create and display the interactive sunburst plot
+
+saveWidget(sunburst_plot, file = &quot;sunburst.html&quot;)</code></pre>
+<div
+style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+<p><iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="sunburst.html" allow="fullscreen"> </iframe></p>
+</div>
+</div>
 <div id="example-2" class="section level1">
 <h1>Example 2</h1>
 <p><br></p>
@@ -792,7 +860,9 @@ road_g &lt;- ggplot(road_geom, aes(x = speed_g, y = as.numeric(Count), fill = as
 <li>This second example utilises the Melbourne housing market dataset.
 Note the code below does not include the pre-processing stage, which is
 necessary as the raw data from Kaggle has missing values.</li>
+<li>It utilises interactive map libraries</li>
 </ul>
+<p><br></p>
 <pre class="r"><code>library(leaflet)
 library(htmlwidgets)
 
@@ -833,16 +903,9 @@ m &lt;- leaflet(melb) %&gt;%
     radius = 3,
     color = ~custom_palette(Price)) %&gt;%
     addLegend(&quot;bottomright&quot;, pal = custom_palette, values = ~Price,
-    title = &quot;Est. GDP (2010)&quot;,
+    title = &quot;Price (AUD)&quot;,
     labFormat = labelFormat(prefix = &quot;$&quot;),
     opacity = 1)
-
-# Add a continuous color legend for Price
-m &lt;- m %&gt;% addLegend(&quot;bottomright&quot;, pal = custom_palette, values = ~Price,
-    title = &quot;Est. GDP (2010)&quot;,
-    labFormat = labelFormat(prefix = &quot;$&quot;),
-    opacity = 1
-  )
 
 # Save the Leaflet map as an HTML widget
 saveWidget(m, file = &quot;leaflet_map.html&quot;)</code></pre>
@@ -854,10 +917,6 @@ style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
     src="leaflet_map.html" allow="fullscreen"> </iframe></p>
 </div>
 <p><br> <br> <br> <br> <br> <br></p>
-</div>
-<div id="melbourne-housing-market-analysis-example"
-class="section level1">
-<h1>Melbourne Housing Market Analysis Example</h1>
 </div>
 <div id="example-3" class="section level1">
 <h1>Example 3</h1>
@@ -880,6 +939,7 @@ style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
 </iframe></p>
 </div>
 <p><a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFinA2H6og&#x2F;view?utm_content=DAFinA2H6og&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener"></a></p>
+<p></br> </br> </br> </br></p>
 </div>
 <div id="template-title" class="section level1">
 <h1>Template title</h1>
