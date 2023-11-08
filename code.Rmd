@@ -1041,7 +1041,7 @@ saveWidget(m, file = "leaflet_map.html")
     src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFxgC0YEks&#x2F;view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
   </iframe>
 </div>
-<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFxgC0YEks&#x2F;view?utm_content=DAFxgC0YEks&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">Melbourne Housing Pack [EDA version]</a> 
+<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFxgC0YEks&#x2F;view?utm_content=DAFxgC0YEks&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener"></a> 
 
 
 </br>
