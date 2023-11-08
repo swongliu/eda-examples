@@ -993,7 +993,7 @@ custom_palette <- colorNumeric(
 
 # Create the map
 m <- leaflet(melb) %>%
-  addProviderTiles("Stadia.AlidadeSmooth") %>%
+   addTiles(urlTemplate = "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png") %>%
   addCircleMarkers(
     lng = ~Longitude,
     lat = ~Latitude,

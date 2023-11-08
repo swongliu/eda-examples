@@ -895,7 +895,7 @@ custom_palette &lt;- colorNumeric(
 
 # Create the map
 m &lt;- leaflet(melb) %&gt;%
-  addProviderTiles(&quot;Stadia.AlidadeSmooth&quot;) %&gt;%
+   addTiles(urlTemplate = &quot;https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png&quot;) %&gt;%
   addCircleMarkers(
     lng = ~Longitude,
     lat = ~Latitude,
