@@ -1,7 +1,23 @@
+# 🔭 Customisable website from R
 
-## To customize
+<br>
+
+## 💡 Brief insights
+
+<br>
 
 * Edit the Rmd files
 * Add new Rmd files and add to the `_site.yml` file
+
+## To update
+
+* Enter the following code in R: 
+
+First, `git status`; then `git add .`; `git commit -m "Your commit message here"`; `git push origin main`
+
+
+
+
+
 
 
