@@ -11,7 +11,7 @@
 
 ## To update
 
-* Enter the following code in R: 
+* Enter the following code in R interface terminal: 
 
 First, `git status`; then `git add .`; `git commit -m "Your commit message here"`; `git push origin main`
 
