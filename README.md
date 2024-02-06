@@ -2,14 +2,21 @@
 
 <br>
 
+
+
+<br>
+
 ## 💡 Brief insights
 
 <br>
 
+
+### To edit
+
 * Edit the Rmd files
 * Add new Rmd files and add to the `_site.yml` file
 
-## To update
+### To update
 
 * Enter the following code in R interface terminal: 
 

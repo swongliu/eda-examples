@@ -761,28 +761,60 @@ road_g &lt;- ggplot(road_geom, aes(x = speed_g, y = as.numeric(Count), fill = as
 <h1>Example 1 (plots)</h1>
 <p><br>
 <img src="code_files/figure-html/unnamed-chunk-4-1.png" width="672" />
-<br> Analysis</p>
+<br> Chart 1 shows both the volume of accidents and the fatal proportion
+are higher for males than females, across all age groups. Fatal
+proportions are highest in the ’tail’ age groups across both genders:
+the 16-17 age group, followed by the 70+ age group. Notably the 70+ age
+group, despite being a lower proportion of the population of drivers,
+has a relatively sizeable accident volume.</p>
 <p><br>
 <img src="code_files/figure-html/unnamed-chunk-5-1.png" width="672" />
-<br> Analysis</p>
+<br> Chart 2 shows the fatal proportion is unsurprisingly much higher if
+the driver does not wear a seatbelt.</p>
 <p><br>
 <img src="code_files/figure-html/unnamed-chunk-6-1.png" width="672" />
-<br> Analysis</p>
+<br> Chart 3 shows the proportion is highest for heavy vehicles and
+single trailers, which seems reasonable as these would inflict the
+greatest damage.</p>
 <p><br>
 <img src="code_files/figure-html/unnamed-chunk-7-1.png" width="672" />
-<br> Analysis</p>
+<br> Chart 4 shows the number of accidents is higher across vehicles in
+the 5-10 and 10-15 age groups. This may be due to the combination of 1)
+more vehicles in these age groups on roads but also 2) vehicles of this
+age lacking the latest safety features - this is corroborated by the
+increasing trend in the fatal proportion as the age of the vehicle
+increases.</p>
 <p><br>
 <img src="code_files/figure-html/unnamed-chunk-8-1.png" width="672" />
-<br> Analysis</p>
+<br> Chart 5 shows the fatal proportion increases with a greater number
+of occupants. This suggests that once an accident occurs, there is
+greater risk of a fatality due to higher exposure (in the form of more
+occupants). However, the accident volumes are small for 3+ occupants, so
+care is needed in interpreting this trend.</p>
 <p><br>
 <img src="code_files/figure-html/unnamed-chunk-9-1.png" width="672" />
-<br> Analysis</p>
+<br> Chart 6 shows the highest volume of accidents occur on weekdays,
+particularly between 3PM and 6PM (peak hour) - more accidents also tend
+to happen later in the working week. However, as shown in Chart 7 below,
+the greatest proportion of fatal accidents occur in the early morning
+between 12AM to 6AM, particularly on Fridays, Saturday and Mondays, that
+is, periods of greater fatigue.</p>
 <p><br>
 <img src="code_files/figure-html/unnamed-chunk-10-1.png" width="672" />
-<br> Analysis</p>
+<br></p>
 <p><br>
 <img src="code_files/figure-html/unnamed-chunk-11-1.png" width="672" />
-<br> Analysis</p>
+<br> Chart 8 shows the proportion of fatal accidents is highest at high
+speed zones of 100km/h or higher, the majority of which do not occur at
+intersec- tions. In addition, the proportion of fatal acci- dents is
+always lowest at cross intersections for all speed zones, most likely
+due to how cross inter- sections encourage precautionary behaviour (with
+traffic lights, etc.).\</p>
+<p>From the above visualisations, it is clear the data is imbalanced as
+a very small proportion of accidents are fatal (in total, less than 2%).
+This has implications for both inference-based modelling as well as
+predictive modelling, which is discussed further in the following
+sections.</p>
 <p><br> <br> <br> <br> <br> <br></p>
 </div>
 <div id="example-2---plotly-examples" class="section level1">
