@@ -13,7 +13,7 @@
 
 ### To edit
 
-* Edit the Rmd files
+* Edit the Rmd files here
 * Add new Rmd files and add to the `_site.yml` file
 
 ### To update
